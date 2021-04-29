@@ -120,6 +120,7 @@ celerybeat.pid
 
 # Environments
 # .env
+btre/btre/.env
 .env/
 .venv/
 env/
