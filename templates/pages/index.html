@@ -12,7 +12,7 @@
                 <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quas, asperiores
                     eveniet vel nostrum magnam voluptatum tempore! Consectetur, id commodi!</p>
                 <div class="search">
-                    {% include 'partials/search_form.html' %}
+                    {% include 'partials/search_form.html' with bedroom_choices=bedroom_choices price_choices=price_choices state_choices=state_choices values=values %}
                 </div>
             </div>
         </div>
@@ -25,9 +25,9 @@
         <h3 class="text-center mb-3">Latest Listings</h3>
         <div class="row">
             {% if listings %}
-            {% for listing in listings %}
-            {% include 'partials/listing_card.html' with listing=listing %}
-            {% endfor %}
+                {% for listing in listings %}
+                    {% include 'partials/listing_card.html' with listing=listing %}
+                {% endfor %}
             {% else %}
             <div class="col-md-12">
                 <p>No listings available</p>

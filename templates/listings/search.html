@@ -1,5 +1,49 @@
 {% extends 'base.html' %}
 
 {% block content %}
-Search
+<section id="showcase-inner" class="showcase-search text-white py-5">
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-md-12">
+				<div class="search">
+					{% include 'partials/search_form.html' with bedroom_choices=bedroom_choices price_choices=price_choices state_choices=state_choices value=values %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+	<div class="container">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item">
+					<a href="/"><i class="fas fa-home"></i> Home</a>
+				</li>
+				<li class="breadcrumb-item">
+					<a href="{% url 'listings' %}">Browse Listings</a>
+				</li>
+				<li class="breadcrumb-item active"> Search Results</li>
+			</ol>
+		</nav>
+	</div>
+</section>
+
+<!-- Listings -->
+<section id="listings" class="py-4">
+	<div class="container">
+		<div class="row">
+			{% if listings %}
+                {% for listing in listings %}
+                    {% include 'partials/listing_card.html' with listing=listing %}
+                {% endfor %}
+            {% else %}
+            <div class="col-md-12">
+                <p>No listings available</p>
+            </div>
+            {% endif %}
+		</div>
+	</div>
+</section>
 {% endblock %}

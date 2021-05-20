@@ -1,44 +1,52 @@
 :root {
-    --blue: #10284e;
-    --white: #fff;
-    --green: #30caa0;
-    --darkblue: #333;
+  --blue: #10284e;
+  --white: #fff;
+  --green: #30caa0;
+  --darkblue: #333;
 }
 
-
 #header {
-    height: 50px;
-    background: var(--blue);
-    color: var(--white);
+  height: 50px;
+  background: var(--blue);
+  color: var(--white);
 }
 
 #branding h1 {
-    color: var(--white);
+  color: var(--white);
 }
 
 a:link,
 a:visited {
-    color: var(--blue);
+  color: var(--blue);
 }
 
 div.breadcrumbs {
-    background: var(--green);
-    color: var(--blue);
+  background: var(--green);
+  color: var(--blue);
 }
 
 div.breadcrumbs a {
-    color: var(--darkblue);
+  color: var(--darkblue);
 }
 
-.module h2, .module caption, .inline-group h2 {
-    background: var(--green);
+.module h2,
+.module caption,
+.inline-group h2 {
+  background: var(--green);
 }
 
-.button, .input[type='submit'], input[type='button'], .submit-row input, a.button, .button.default, input[type=submit].default, .submit-row input.default {
-    background: var(--blue);
-    color: var(--white);
+.button,
+.input[type='submit'],
+input[type='button'],
+.submit-row input,
+a.button,
+.button.default,
+input[type='submit'].default,
+.submit-row input.default {
+  background: var(--blue);
+  color: var(--white);
 }
 
 .selector-chosen h2 {
-    background: var(--blue) !important;
+  background: var(--blue) !important;
 }
