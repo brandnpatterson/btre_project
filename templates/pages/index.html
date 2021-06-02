@@ -2,10 +2,15 @@
 
 {% load static %}
 
+{% block title %} | Welcome {% endblock %}
+
 {% block content %}
 <!-- Showcase -->
 <section id="showcase">
     <div class="container text-center">
+        <!-- Alerts -->
+        {% include 'partials/alerts.html' %}
+
         <div class="home-search p-5">
             <div class="overlay p-5">
                 <h1 class="display-4 mb-4">Property Searching Just Got So Easy</h1>
